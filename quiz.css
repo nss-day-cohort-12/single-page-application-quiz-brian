@@ -1,0 +1,26 @@
+body {
+	width: 100%;
+	background-color: white;
+}
+
+/*** NAVIGATION BAR ***/
+#navBar {
+	height: 50px;
+	background-color: darkgreen;
+}
+
+.navbar-form {
+
+}
+
+/*** CONTAINER DIV ***/
+#container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+
+
+
+
