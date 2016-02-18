@@ -17,11 +17,11 @@ var Icon = (function() {
 			});
 			iconCarLoader.open("Get", "inventory.json");
 			iconCarLoader.send();			
+		},
+
+		getCar: function () {
+			return iconCarArray;
 		}
-		// Expose a public getter to read the array of cars.  Is this done in line 18?
-		// getCar: function () {
-		// 	return iconCarArray;
-		// }
 	}
 })();
 
