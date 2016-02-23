@@ -62,20 +62,17 @@ body {
 #container {
 	width: 90%;
 	margin: 60px auto;
-	/*border: 1px dashed red; /*REMOVE BEFORE PRESS*/*/
 }
 
 /*** CARDS ***/
 .cards {
 	width: 28%;
 	background-color: rgba(118, 133, 138, .5);
-	/*border: 10px groove rgba(118, 133, 138, .5);*/
 	margin: 20px 0 10px 43px;
 	display: inline-block;
 	font-size: 1.6em;
 	font-family: 'Play', 'sans-serif';
 	text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
-/*	border-bottom-width:; check out animate properties.  Toggle all sides */
 }
 
 h3 {
@@ -95,8 +92,9 @@ h3, p {
 
 /**** Event theme ****/
 .card-change {
-	border-width: 15px !important; /* overides inline styling from DOM */
-	background-color: white;
+	border: 20px groove rgba(118, 133, 138, .5)!important; /* overides inline styling from DOM */
+	background-color: #84917E;
+	box-shadow: 0 0 2px yellow, 0 0 2px yellow, 0 0 2px yellow, 0 0 2px yellow; 
 }
 
 
