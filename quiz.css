@@ -61,8 +61,8 @@ body {
 /*** CONTAINER DIV ***/
 #container {
 	width: 90%;
-	margin: 0 auto;
-	/*border: 1px dashed red; REMOVE BEFORE PRESS*/
+	margin: 60px auto;
+	/*border: 1px dashed red; /*REMOVE BEFORE PRESS*/*/
 }
 
 /*** CARDS ***/
@@ -90,11 +90,12 @@ h3, p {
 
 .descrip {
 	text-align: justify;
+	height: 222px;
 }
 
 /**** Event theme ****/
 .card-change {
-	border-width: 15px;
+	border-width: 15px !important; /* overides inline styling from DOM */
 	background-color: white;
 }
 

@@ -25,7 +25,7 @@ var Icon = (function() {
 	}
 })();
 
-console.log("Icon: ", Icon);
+//console.log("Icon: ", Icon);
 
 
 

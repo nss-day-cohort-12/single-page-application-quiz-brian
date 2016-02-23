@@ -1,37 +1,45 @@
 var Icon = (function (oldIcon) {
-	var chosenCard = document.getElementById("cards");
-	var userInput = document.getElementById("user-input");
-	var button = document.getElementById("reset");
-
+	var containerEl = document.getElementById("container");
+	var inputEl = document.getElementById("user-input");
+	var buttonEl = document.getElementById("reset");
+	/***** Card Element Function - helper function *****/
+	oldIcon.domCards = function () {
+	  var cards = document.getElementsByClassName("cards")
+	  return cards
+	};
+	// When you click on car elements, change the width of the border to a higher value and change background color of card
 	oldIcon.activateEvents = function(event) {
+		var cards = oldIcon.domCards();
 
-// When you click on car elements, change the width of the border to a higher value and change background color of card
-		chosenCard.addEventListener("click", function (event) {
-			console.log("hello", event.target);
-			if (event.target.classname.indexOf("cards") >= 0) {
-				chosenCard = event.target;
-			} else {
-				chosenCard = event.target.parentNode;
+		for (var i = 0; i < cards.length; i++) {			
+			console.log("card", cards[i]);
+			cards[i].addEventListener("click", function(event) {
+				var card = event.currentTarget;
+				oldIcon.changeCard(card);
+				// also on click of car elements clear value of text input and put cursor in the text input (.focus()).
+				inputEl.focus();
+				inputEl.value = "";
+				oldIcon.infuseText(card);
+			});
+		}
+				
+		// Event Listener for Reset of border and background to original values
+		buttonEl.addEventListener("click", function(event) {
+			for (var i = 0; i < cards.length; i++) {
+				cards[i].classList.remove("card-change");
 			}
+			
 		});
-
-	
-
-			// document.body.classList.toggle("card-change");
-
-
-// Event Listener for Reset of border and background to original values
-		button.addEventListener("click", function(event) {
-			console.log("btn-click");
-			//Call function from augobject
+		// When you type in text input - description of the currently selected car should be bound to what you are typing in and match it exactly 
+		inputEl.addEventListener("keyup", function(event) {
+			var inputText = event.target.value;
+			var newDescription = document.getElementsByClassName("description");
+			newDescription[0].childNodes[6].innerHTML = inputText;	
 		});
 
 	};
 
-// also on click of car elements clear value of text input and put cursor in the text input (.focus()).
 
-// When you type in text input - description of the currently 
 	return oldIcon;
 })(Icon);
 
-Icon.activateEvents();
