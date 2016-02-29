@@ -1,3 +1,4 @@
+/**** SECOND IIFE ****/
 var Icon = (function (oldIcon) {
 	var containerEl = document.getElementById("container");
 	var inputEl = document.getElementById("user-input");
@@ -39,5 +40,6 @@ var Icon = (function (oldIcon) {
 	};
 
 	return oldIcon;
+	
 })(Icon);
 

@@ -61,7 +61,7 @@ body {
 /*** CONTAINER DIV ***/
 #container {
 	width: 90%;
-	margin: 60px auto;
+	margin: 20px auto;
 }
 
 /*** CARDS ***/
@@ -90,9 +90,9 @@ h3, p {
 	height: 222px;
 }
 
-/**** Event theme ****/
+/**** EVENT THEME ****/
 .card-change {
-	border: 20px groove rgba(118, 133, 138, .5)!important; /* overides inline styling from DOM */
+	border: 10px groove rgba(118, 133, 138, .5)!important; /* overides inline styling from DOM */
 	background-color: #84917E;
 	box-shadow: 0 0 2px yellow, 0 0 2px yellow, 0 0 2px yellow, 0 0 2px yellow; 
 }
